@@ -13,13 +13,6 @@ app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/register.html'));
 });
 
-app.post('/registro', (req, res) => {
-    console.log(req.body);
-    // Guardar en el sistema
-    users.push(req.body);
-    // Redireccionamos a la pagina
-    res.redirect('/');
-});
 
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/login.html'));
